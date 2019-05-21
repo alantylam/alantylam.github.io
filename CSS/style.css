@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
 body {
-	background: #242424;
+	background: #474747;
 	margin: 0px;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 800;
 }
 
 .container {
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
+	padding-bottom: 21px;
+	position: fixed;
+	background: #191919;
+	z-index: 1;
 }
 
 header {
-	background: #f2f2f2;
+	background: #191919;
 }
 
 header::after {
@@ -24,10 +28,16 @@ header::after {
 
 .logo {
 	float: left;
+	margin-top: 18px;
+	margin-left: 50px;
+	text-decoration: none;
+  	color: white;
+  	font-size: 25px;
 }
 
 nav {
 	float: right;
+	margin-right: 50px;
 }
 
 /*Style for the List*/
@@ -42,13 +52,12 @@ nav li {
 	display: inline-block;
 	margin-left: 50px;
 	margin-top: 25px;
-
 	position: relative;
 }
 
 /*Style for each hyperlink*/
 nav a {
-	color: #444;
+	color: white;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -74,5 +83,14 @@ nav a::before {
 }
 
 nav a:hover::before {
-  width: 100%;
+  	width: 100%;
 }
+
+h1, h2, p {
+  	color: white;
+}
+
+#body {
+	margin-top: 68px;
+}
+
