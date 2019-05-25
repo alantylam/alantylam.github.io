@@ -3,35 +3,50 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
+<meta name="viewport" content="width=device-width">
 <title>Alan's Website</title>
 </head>
 
 <body>
 <header>
 	<div class="container" id="navbar">
-		<a class="logo" href="index.html">AlanTYLam</a>
+		<div class="logo">
+			<a id="logo">ATYL</a>
+			<a class="btn active" id="logo2" href="#videobg">Alan Tsz Yeung Lam</a>
+		</div>
 		<nav id="navbar_top">
 			<ul>
-				<li><a href="#about_me">About Me</a></li>
-				<li><a href="#education">Education</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#relevant_projects">Relevant Projects</a></li>
-				<li><a href="#work_experience">Work Experience</a></li>
-				<li><a href="#feedback">Feedback</a></li>
+				<li><a class="btn" href="#about_me">About Me</a></li>
+				<li><a class="btn" href="#education">Education</a></li>
+				<li><a class="btn" href="#skills">Skills</a></li>
+				<li><a class="btn" href="#relevant_projects">Relevant Projects</a></li>
+				<li><a class="btn" href="#work_experience">Work Experience</a></li>
 			</ul>
 		</nav>
 	</div>
 
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("navbar");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+
 </header>
 <div id="body">
-	<slider class="carousel-area" id="carousel">
-		<slide><p>Slide 1</p></slide>
-		<slide><p>Slide 2</p></slide>
-	<!--
-		<img src="Image/r8_front.jpg">
-		<img src="Image/r8_rear.jpg">
-	-->
-	</slider>
+	<div class="video_area" id="video">
+		<video autoplay muted loop id="videobg">
+			<source src="Video/coding.mp4" type="video/mp4">
+	  		Your browser does not support HTML5 video.
+		</video>
+		<h2 class="overlay"><hr>Welcome<hr></h2>
+	</div>
 	<div class="about_me-area" id="about_me">
 		<div class="text">
 			<h1 class="section_title">About Me</h1>
@@ -66,19 +81,12 @@
 			<p>Fredrickson (2008), un científico y autor, transmite que si todos hacemos un acto de bondad al azar todos los días, podríamos poner al mundo en la dirección correcta. La dirección indicada por un acto de bondad se debe a la posible reacción en cadena, que incita a otros a "pagarlo por adelantado" a otros, creando un caso para la sostenibilidad. Mis actos de bondad son evaluados en términos de valores personales y consumo; Ambos pueden acumularse para la sostenibilidad.</p>
 		</div>
 	</div>
-
-	<div class="feedback-area" id="feedback">
-		<div class="text">
-			<h1 class="section_title">Feedback</h1>
-			<p>Fredrickson (2008), un científico y autor, transmite que si todos hacemos un acto de bondad al azar todos los días, podríamos poner al mundo en la dirección correcta. La dirección indicada por un acto de bondad se debe a la posible reacción en cadena, que incita a otros a "pagarlo por adelantado" a otros, creando un caso para la sostenibilidad. Mis actos de bondad son evaluados en términos de valores personales y consumo; Ambos pueden acumularse para la sostenibilidad.</p>
-		</div>
-	</div>
 </div>
 
 <div class="footer">
 	<a class="footer-items" id="linkedin" href="https://www.linkedin.com/in/alantylam/"><img src="./Image/linkedin.png" height="50" width="50" /></a>
 	<p class="footer-items" id="contact-info">E-mail: alanlam56@gmail.com<br>Phone: +1(306)681-4998</p>
-	<p class="footer-items" id="copy-right">&copy;2019 Alan Tsz Yeung Lam. All Rights Reserved.</p>	
+	<p class="footer-items" id="copy-right">&copy;2019 ATYL. All Rights Reserved.</p>	
 </div>
 </body>
 

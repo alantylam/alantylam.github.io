@@ -12,8 +12,9 @@ body {
 	margin: 0 auto;
 	padding-bottom: 21px;
 	position: fixed;
-	background: rgba(25, 25, 25, 0.7);
+	background: rgba(25, 25, 25, 0.90);
 	z-index: 1;
+	box-shadow: 0px -10px 7px 10px black;
 }
 
 header::after {
@@ -22,13 +23,32 @@ header::after {
 	clear: both;
 }
 
-.logo {
+#logo2 {
+	color: rgba(0,0,0,0);
+	margin-top: 13px;
+	margin-left: -85px;
 	float: left;
-	margin-top: 18px;
-	margin-left: 50px;
 	text-decoration: none;
+  	font-size: 35px;
+  	transition: color 1s;
+}
+
+#logo {
+	color: white;
+	margin-top: 13px;
+	margin-left: 50px;
+	float: left;
+	text-decoration: none;
+  	font-size: 35px;
+  	transition: color 1s;
+}
+
+.logo:hover #logo2 {
   	color: white;
-  	font-size: 25px;
+}
+
+.logo:hover #logo {
+  	color: rgba(0,0,0,0);
 }
 
 nav {
@@ -47,7 +67,7 @@ nav ul {
 nav li {
 	display: inline-block;
 	margin-left: 50px;
-	margin-top: 25px;
+	margin-top: 30px;
 	position: relative;
 }
 
@@ -57,6 +77,8 @@ nav a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
+
+	transition: color 1s;
 }
 
 nav a:hover {
@@ -64,7 +86,7 @@ nav a:hover {
 }
 
 nav a::before {
-	margin-bottom: -24px;
+	margin-bottom: -27px;
 
 	content: '';
 	display: block;
@@ -82,12 +104,43 @@ nav a:hover::before {
   	width: 100%;
 }
 
+.active {
+	color: #3881f7;
+}
+
 h1, h2, p {
   	color: white;
 }
 
 #body {
 	margin-top: 68px;
+}
+
+.video_area {
+	position: relative;
+}
+
+video {
+	height: auto;
+  	vertical-align: middle;
+  	width: 100%;
+}
+
+.overlay {
+	background: rgba(0,0,0,0);
+  	position: absolute;
+  	top: 0; right: 0; bottom: 0; left: 0;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	font-size: 9vw;
+	text-shadow: 5px 5px 20px black;
+}
+
+hr {
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .about_me-area, .education-area, .skills-area, .relevant_projects-area, .work_experience-area, .feedback-area {
@@ -120,7 +173,7 @@ p {
 	background: #848484;
 }
 
-.education-area, .relevant_projects-area, .feedback-area {
+.education-area, .relevant_projects-area {
 }
 
 .section_title {
