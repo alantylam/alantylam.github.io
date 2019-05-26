@@ -12,9 +12,16 @@ body {
 	margin: 0 auto;
 	padding-bottom: 21px;
 	position: fixed;
-	background: rgba(25, 25, 25, 0.90);
+	background-color: rgba(25, 25, 25, 0);
 	z-index: 1;
-	box-shadow: 0px -10px 7px 10px black;
+	transition: background 1s;
+	/* NavBar Shadow
+	box-shadow: 0px -6px 7px 7px black;
+	*/
+}
+
+.container:hover {
+	background-color: rgba(25, 25, 25, 1);
 }
 
 header::after {
@@ -121,6 +128,7 @@ h1, h2, p {
 }
 
 video {
+	margin-top: -68px;
 	height: auto;
   	vertical-align: middle;
   	width: 100%;
@@ -134,13 +142,14 @@ video {
   	align-items: center;
   	justify-content: center;
   	font-size: 9vw;
-	text-shadow: 5px 5px 20px black;
+	text-shadow: 0px 3px 6px black;
 }
 
 hr {
     width: 100%;
     margin-left: 40px;
     margin-right: 40px;
+    box-shadow: 0 1px 6px 1px black;
 }
 
 .about_me-area, .education-area, .skills-area, .relevant_projects-area, .work_experience-area, .feedback-area {
@@ -150,30 +159,51 @@ hr {
 	align-items: center;
 	flex-wrap: wrap;
 	flex-direction: row;
+	padding-top: 80px;
+	padding-bottom: 110px;
 	width: 100%;
-	height: 875px;
+	height: 100%;
 	/*margin-top: 80px;*/
 }
 
 .text {
-	width: 65%;
+	width: 80%;
 	height: 80%;
 }
 
 h1 {
+	font-size: 70px;
+}
+
+h2 {
 	font-size: 50px;
 }
 
 p {
-	font-size: 25px;
+	font-size: 20px;
 	line-height: 50px;
 }
 
-.about_me-area, .skills-area, .work_experience-area {
-	background: #848484;
+h1, p {
+	text-shadow: 1px 1px 2px black;
 }
 
-.education-area, .relevant_projects-area {
+a {
+	color: white;
+}
+
+.about_me-area, .skills-area, .work_experience-area {
+	/*background: #848484;*/
+	background: #cccccc;
+}
+
+.about_me-area h1, .about_me-area p, .skills-area h1, .skills-area p, .work_experience-area h1, .work_experience-area h2, .work_experience-area p {
+	color: black;
+	text-shadow: 1px 1px 2px grey;
+}
+
+.skills-area .text, .relevant_projects-area .text {
+	width: 50%;
 }
 
 .section_title {

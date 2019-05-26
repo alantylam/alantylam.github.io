@@ -4,6 +4,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
 <meta name="viewport" content="width=device-width">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <title>Alan's Website</title>
 </head>
 
@@ -25,7 +26,25 @@
 		</nav>
 	</div>
 
-<script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".container").hover(function(){
+  		$(this).css("background-color", "rgba(25, 25, 25, 1)");
+  	}, function(){
+  		$(this).css("background-color", "rgba(25, 25, 25, 0)");
+	});
+    $(window).scroll(function(){
+        if($(window).scrollTop() > $(window).height()-40){
+            $(".container").css({"background-color":"rgba(25, 25, 25, 1)"});
+        }
+        else {
+        	$(".container").css({"background-color":"rgba(25, 25, 25, 0)"});
+        }
+    })
+})
+</script>
+
+<script type="text/javascript">
 // Add active class to the current button (highlight it)
 var header = document.getElementById("navbar");
 var btns = header.getElementsByClassName("btn");
@@ -50,35 +69,57 @@ for (var i = 0; i < btns.length; i++) {
 	<div class="about_me-area" id="about_me">
 		<div class="text">
 			<h1 class="section_title">About Me</h1>
-			<p>Fredrickson (2008), un científico y autor, transmite que si todos hacemos un acto de bondad al azar todos los días, podríamos poner al mundo en la dirección correcta. La dirección indicada por un acto de bondad se debe a la posible reacción en cadena, que incita a otros a "pagarlo por adelantado" a otros, creando un caso para la sostenibilidad. Mis actos de bondad son evaluados en términos de valores personales y consumo; Ambos pueden acumularse para la sostenibilidad.</p>
+			<p>
+			I am a Computer Science Graduate since 2018 June. Through different experiences and encounters in my degree, I have developed a strong interest in front-end and mobile development. Most of my work experience is in the Retail Tech Industry. I worked at 3 different telecommunication companies, and currently working for Apply Retail. When I am not at work, I like to work on side projects and participate in different sports, such as badminton and volleyball.
+			</p>
 		</div>
 	</div>
 
 	<div class="education-area" id="education">
 		<div class="text">
 			<h1 class="section_title">Education</h1>
-			<p>Fredrickson (2008), un científico y autor, transmite que si todos hacemos un acto de bondad al azar todos los días, podríamos poner al mundo en la dirección correcta. La dirección indicada por un acto de bondad se debe a la posible reacción en cadena, que incita a otros a "pagarlo por adelantado" a otros, creando un caso para la sostenibilidad. Mis actos de bondad son evaluados en términos de valores personales y consumo; Ambos pueden acumularse para la sostenibilidad.</p>
+			<p>
+			I started my degree at the University of Calgary in September 2012. As I mentioned above, I majored in Computer Science. After years of practicing and studying, I have built a strong foundation in software development. Throughout my time at the University, I have created and participated in multiple projects. Projects involve programming, applying design principles, cooperating with team members and communicating with clients. In my final year, I was working on the project “MyBX” with a small group of people. During the project, we have to gather requirements from our client, design and create prototypes and have people review our prototypes. And then implement the UI using swift based on our final prototype.
+			</p>
 		</div>
 	</div>
 
 	<div class="skills-area" id="skills">
 		<div class="text">
 			<h1 class="section_title">Skills</h1>
-			<p>Fredrickson (2008), un científico y autor, transmite que si todos hacemos un acto de bondad al azar todos los días, podríamos poner al mundo en la dirección correcta. La dirección indicada por un acto de bondad se debe a la posible reacción en cadena, que incita a otros a "pagarlo por adelantado" a otros, creando un caso para la sostenibilidad. Mis actos de bondad son evaluados en términos de valores personales y consumo; Ambos pueden acumularse para la sostenibilidad.</p>
+			<p>
+			• Front-End: HTML5 | CSS<br>
+			• Programming: Java | JavaScript | Python | C# | Swift<br>
+			• Database: SQL<br>
+			• Delivery Methodology: Agile<br>
+			• Operating Systems: Windows, Mac OS, Linux, Unix<br>
+			</p>
 		</div>
 	</div>
 
 	<div class="relevant_projects-area" id="relevant_projects">
 		<div class="text">
 			<h1 class="section_title">Relevant Projects</h1>
-			<p>Fredrickson (2008), un científico y autor, transmite que si todos hacemos un acto de bondad al azar todos los días, podríamos poner al mundo en la dirección correcta. La dirección indicada por un acto de bondad se debe a la posible reacción en cadena, que incita a otros a "pagarlo por adelantado" a otros, creando un caso para la sostenibilidad. Mis actos de bondad son evaluados en términos de valores personales y consumo; Ambos pueden acumularse para la sostenibilidad.</p>
+			<p>
+			MyBX - <a href="https://www.github.com/alantylam/mybx">https://www.github.com/alantylam/mybx</a><br>
+			Car Rental Website - <a href="https://www.github.com/alantylam/CPSC471_Project">https://www.github.com/alantylam/CPSC471_Project</a><br>
+			Meal Ordering - <a href="https://www.github.com/alantylam/mealOrdering">https://www.github.com/alantylam/mealOrdering</a><br>
+			WS - <a href="https://www.github.com/alantylam/ws">https://www.github.com/alantylam/ws</a><br>
+			</p>
 		</div>
 	</div>
 
 	<div class="work_experience-area" id="work_experience">
 		<div class="text">
 			<h1 class="section_title">Work Experience</h1>
-			<p>Fredrickson (2008), un científico y autor, transmite que si todos hacemos un acto de bondad al azar todos los días, podríamos poner al mundo en la dirección correcta. La dirección indicada por un acto de bondad se debe a la posible reacción en cadena, que incita a otros a "pagarlo por adelantado" a otros, creando un caso para la sostenibilidad. Mis actos de bondad son evaluados en términos de valores personales y consumo; Ambos pueden acumularse para la sostenibilidad.</p>
+			<h2>Apple - Specialist (Full-Time: 40hrs / wk)</h2>
+			<p>
+			• Achieved Top 3 in sales performance among 50+ employees as a result of contribution over $600,000 of the store’s Quarterly Revenue<br>
+			• Appointed as the iPhone Champion, responsibility includes mentoring of team members about Carrier Interactions and support team members with technical issues<br>
+			• Demonstrated exceptional interpersonal skills through my 93% Net Promoter Score<br>
+			• Appointed as Business Mentor, responsible for mentoring team members of positioning business introduction, creating business accounts and driving business revenue<br>
+			• Provided bi-weekly training session to team members who had no experience with Carrier Transactions
+			</p>
 		</div>
 	</div>
 </div>
