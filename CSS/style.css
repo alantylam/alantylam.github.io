@@ -1,27 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 body {
-	background: #474747;
+	background: rgba(0, 0, 0, 1);
 	margin: 0px;
 	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+	font-weight: 400;
 }
+
+/*-----Testing-----*/
+#myBtn {
+  visibility: hidden;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 300ms linear, background-color 0.5s;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/*-----Testing-End-----*/
 
 .container {
 	width: 100%;
 	margin: 0 auto;
 	padding-bottom: 21px;
 	position: fixed;
-	background-color: rgba(25, 25, 25, 0);
+	background-color: rgba(239, 239, 239, 0);
 	z-index: 1;
-	transition: background 1s;
+	transition: background-color 0.5s, box-shadow 0.6s;
 	/* NavBar Shadow
 	box-shadow: 0px -6px 7px 7px black;
 	*/
-}
-
-.container:hover {
-	background-color: rgba(25, 25, 25, 1);
 }
 
 header::after {
@@ -64,14 +85,14 @@ nav {
 }
 
 /*Style for the List*/
-nav ul {
+.nav-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
 /*Style for the element in the list*/
-nav li {
+.nav-item {
 	display: inline-block;
 	margin-left: 50px;
 	margin-top: 30px;
@@ -79,7 +100,7 @@ nav li {
 }
 
 /*Style for each hyperlink*/
-nav a {
+.nav-item-link {
 	color: white;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -88,11 +109,11 @@ nav a {
 	transition: color 1s;
 }
 
-nav a:hover {
+.nav-item-link:hover {
 	color: #3881f7;
 }
 
-nav a::before {
+.nav-item-link::before {
 	margin-bottom: -27px;
 
 	content: '';
@@ -107,12 +128,12 @@ nav a::before {
 	transition: all ease-in-out 250ms;
 }
 
-nav a:hover::before {
+.nav-item-link:hover::before {
   	width: 100%;
 }
 
-.active {
-	color: #3881f7;
+.active .nav-item-link::before {
+	width: 100%; 
 }
 
 h1, h2, p {
@@ -125,6 +146,7 @@ h1, h2, p {
 
 .video_area {
 	position: relative;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 video {
@@ -132,17 +154,21 @@ video {
 	height: auto;
   	vertical-align: middle;
   	width: 100%;
+  	opacity: 0.2;
+  	background: rgba(0, 0, 0, 1);
 }
 
 .overlay {
+	margin-top: -34px;
 	background: rgba(0,0,0,0);
   	position: absolute;
   	top: 0; right: 0; bottom: 0; left: 0;
   	display: flex;
   	align-items: center;
   	justify-content: center;
-  	font-size: 9vw;
+  	font-size: 7vw;
 	text-shadow: 0px 3px 6px black;
+	font-family: Roboto Mono;
 }
 
 hr {
@@ -193,10 +219,11 @@ a {
 }
 
 .about_me-area, .skills-area, .work_experience-area {
-	/*background: #848484;*/
 	background: #cccccc;
 }
-
+.education-area, .relevant_projects-area {
+	background: #212121;
+}
 .about_me-area h1, .about_me-area p, .skills-area h1, .skills-area p, .work_experience-area h1, .work_experience-area h2, .work_experience-area p {
 	color: black;
 	text-shadow: 1px 1px 2px grey;
