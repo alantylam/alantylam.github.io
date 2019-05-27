@@ -8,7 +8,6 @@ body {
 	font-weight: 400;
 }
 
-/*-----Testing-----*/
 #myBtn {
   visibility: hidden;
   position: fixed;
@@ -29,8 +28,6 @@ body {
 #myBtn:hover {
   background-color: #555;
 }
-
-/*-----Testing-End-----*/
 
 .container {
 	width: 100%;
@@ -169,6 +166,7 @@ video {
   	font-size: 7vw;
 	text-shadow: 0px 3px 6px black;
 	font-family: Roboto Mono;
+	color: #e5e5e5;
 }
 
 hr {
@@ -178,15 +176,47 @@ hr {
     box-shadow: 0 1px 6px 1px black;
 }
 
+.parallax {
+	height: 400px;
+	width: 100%;
+}
+
+#about_me, #skills, #work_experience {
+	background: url('../Image/r8_front.jpg') no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#education, #relevant_projects {
+	background: url('../Image/r8_rear.jpg') no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.tint {
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sect-title {
+  	font-size: 4vw;
+	text-align: center;
+}
+
 .about_me-area, .education-area, .skills-area, .relevant_projects-area, .work_experience-area, .feedback-area {
 	position: relative;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	flex-direction: row;
-	padding-top: 80px;
-	padding-bottom: 110px;
+	/*padding-top: 80px;
+	padding-bottom: 100px;*/
 	width: 100%;
 	height: 100%;
 	/*margin-top: 80px;*/
