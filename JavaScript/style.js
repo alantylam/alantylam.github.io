@@ -15,7 +15,7 @@ $(document).ready(function(){
   });
 
   function navBarBehaviour() {
-    if($(window).scrollTop() > $("video").height()-77){
+    if($(window).scrollTop() > $("video").height()-144){
       $(".container").css({"background-color":"rgba(239, 239, 239, 1)"});
       $("nav a").css({"color":"black"});
       $(".logo a").css({"color":"black"});
