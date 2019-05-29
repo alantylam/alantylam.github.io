@@ -2,10 +2,10 @@
 
 body
 {
-	font-family: 'Inconsolata', monospace;
+	font-family: 'Inconsolata';
 	margin: 0;
 	padding: 0;
-	background-color: black;
+	background-color: #212121;
 }
 
 .container
@@ -13,7 +13,6 @@ body
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	color: white;
 
 	scroll-behavior: smooth;
 	overflow: auto;
@@ -25,8 +24,9 @@ body
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
-	background-color: black;
+	background: rgba(0,0,0,0);
 	scroll-snap-align: start;
+	color: white;
 }
 
 .section:nth-child(1)
@@ -39,36 +39,121 @@ body
 }
 .section:nth-child(3)
 {
-
 }
 .section:nth-child(4)
 {
+}
 
+#slide-home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #name
 {
-	margin: 30px 50px;
-	font-size: 50px;
-	color: white;
+	position: absolute;
+	top: 0px;
+	left: 45px;
+	font-size: 3vw;
 }
 
 #message {
 	color: #18db2b;
-	font-size: 100px;
+	font-size: 9vw;
 	text-align: center;
 }
 
+/* blinking caret */
+#blinking h1 {
+	font-size: 7.5vw;
+	border-right: .09em solid; /* The typwriter cursor */
+	animation:
+    	blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  	from, to { border-color: transparent }
+  	50% { border-color: #18db2b }
+}
+/* blinking caret -END- */
+
 #btn-run {
+	text-decoration: none;
 	color: white;
+	position: absolute;
+	bottom: 40px;
+	right: -25px;
 	float: right;
 	margin-right: 80px;
 	border: 0px;
 	background-color: rgba(0,0,0,0);
-	font-size: 30px;
+	font-size: 4.3vw;
+
+	transition: color 0.8s;
+}
+
+#btn-run:hover {
+	color: rgba(255,255,255,0.3);
+}
+
+#learn-more {
+	position: absolute;
+	bottom: 50px;
+	text-decoration: none;
+	font-size: 1.3vw;
+	color: white;
 }
 
 .title {
 	text-align: center;
-	font-size: 60px;
+	font-size: 6vw;
 }
+
+/* Animation for the down anchor */
+#learn-more {
+  padding-top: 70px;
+}
+#learn-more span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb05 2s infinite;
+  animation: sdb05 2s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb05 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb05 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+/* Animation for the down anchor -END- */

@@ -38,7 +38,7 @@ $(document).ready(function(){
       document.getElementById("myBtn").style.opacity = "0";
     }
   }
-})
+});
 
 function topFunction() {
   document.body.scrollTop = 0;
