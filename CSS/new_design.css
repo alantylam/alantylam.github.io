@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
 
+html {
+	scroll-behavior: smooth;
+}
+
 body
 {
 	font-family: 'Inconsolata';
@@ -8,15 +12,46 @@ body
 	background-color: #212121;
 }
 
+.nav {
+	background-color: #212121;
+	align-items: center;
+}
+
+.nav ul {
+	background-color: #212121;
+	position: fixed;
+	top: 25%;
+	right: 25px;
+	display: block;
+	text-align: right;
+	list-style: none;
+	font-size: 1.6vw;
+	z-index: 10;
+}
+
+.nav ul li {
+	margin-top: 40px; 
+	margin-left: -15px;
+}
+
+.nav ul li a {
+	color: white;
+	text-decoration: none;
+	transition: opacity 0.5s, color 1s, border-color 0.5s;
+	border-bottom: 2px solid #18db2b;
+	border-width: 100%;
+}
+
+.nav ul li a:hover {
+	opacity: 0.5;
+	border-color: red;
+}
+
 .container
 {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-
-	scroll-behavior: smooth;
-	overflow: auto;
-	scroll-snap-type: y mandatory;
 }
 
 .section
@@ -24,27 +59,9 @@ body
 	width: 100%;
 	height: 100vh;
 	background-size: cover;
-	background: rgba(0,0,0,0);
-	scroll-snap-align: start;
+	background-color: #212121;
 	color: white;
-}
 
-.section:nth-child(1)
-{
-
-}
-.section:nth-child(2)
-{
-
-}
-.section:nth-child(3)
-{
-}
-.section:nth-child(4)
-{
-}
-
-#slide-home {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -60,13 +77,13 @@ body
 
 #message {
 	color: #18db2b;
-	font-size: 9vw;
+	font-size: 6vw;
 	text-align: center;
 }
 
 /* blinking caret */
 #blinking h1 {
-	font-size: 7.5vw;
+	font-size: 5vw;
 	border-right: .09em solid; /* The typwriter cursor */
 	animation:
     	blink-caret 1s step-end infinite;
@@ -78,6 +95,7 @@ body
 }
 /* blinking caret -END- */
 
+/*
 #btn-run {
 	text-decoration: none;
 	color: white;
@@ -96,24 +114,24 @@ body
 #btn-run:hover {
 	color: rgba(255,255,255,0.3);
 }
+*/
 
 #learn-more {
+	visibility: hidden;
 	position: absolute;
 	bottom: 50px;
+	padding-top: 70px;
 	text-decoration: none;
 	font-size: 1.3vw;
-	color: white;
-}
-
-.title {
-	text-align: center;
-	font-size: 6vw;
+	color: rgba(0,0,0,0);
+	transition: color 2s, opacity 1s;
 }
 
 /* Animation for the down anchor */
-#learn-more {
-  padding-top: 70px;
+#learn-more:hover {
+	opacity: 0.5;
 }
+
 #learn-more span {
   position: absolute;
   top: 0;
@@ -121,8 +139,8 @@ body
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 1px solid #18db2b;
+  border-bottom: 1px solid #18db2b;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb05 2s infinite;
@@ -157,3 +175,40 @@ body
   }
 }
 /* Animation for the down anchor -END- */
+
+.title {
+	font-size: 5vw;
+}
+
+.text {
+	font-size: 1.7vw;
+}
+
+#slide-about-section-text {
+	box-sizing: content-box;
+	border: 2px solid white;
+	width: 50%;
+	display: block;
+	text-align: center;	
+}
+
+#slide-about-text {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+.section-photo img {
+	margin-left: 60px;
+	box-sizing: content-box;
+	border: 2px solid white;
+	border-radius: 100px;
+}
+
+#slide-home {}
+
+#slide-about {}
+
+#slide-projects {}
+
+#slide-contact {}
