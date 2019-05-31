@@ -1,5 +1,13 @@
 window.onload = firstLn;
 
+// NavBar: click to change active state
+$(document).ready(function(){
+  	$('ul li a').click(function(){
+    	$('li a').removeClass("active");
+    	$(this).addClass("active");
+	});
+});
+
 var i = 0;
 var j = 0;
 var line_1 = ' Hi, my name is Alan. ';
