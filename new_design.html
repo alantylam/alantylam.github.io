@@ -11,28 +11,22 @@
 </head>
 
 <body>
-
+	<div class="nav">
+		<ul class="nav-items" id="nav-items">
+			<li class="item"><a class="link active" id="link-1" href="#slide-home">HOME</a></li>
+			<li class="item"><a class="link" id="link-2" href="#slide-about">ABOUT</a></li>
+			<li class="item"><a class="link" id="link-3" href="#slide-projects">PROJECTS</a></li>
+			<li class="item"><a class="link" id="link-4" onclick="scrollToBottom()">CONTACT</a></li>
+		</ul>
+	</div>
 	<div class="container">
-		<div class="nav">
-			<ul class="nav-items" id="nav-items">
-				<li class="item"><a class="link active" href="#slide-home">HOME</a></li>
-				<li class="item"><a class="link" href="#slide-about">ABOUT</a></li>
-				<li class="item"><a class="link" href="#slide-projects">PROJECTS</a></li>
-				<li class="item"><a class="link" href="#slide-contact">CONTACT</a></li>
-			</ul>
-		</div>
-
 		<div class="section" id="slide-home">
 			<h1 id="name">AlanLam</h1>
 
 			<p id="message">></p>
-			<!--
-			<a id="btn-run" href="#" onclick="typeWriter()">RUN >_</a>
-			-->
 			<div id="blinking"><h1><br></h1></div>
 
 			<a id="learn-more" href="#slide-about">
-				Learn more about me<br>
 				<span></span>
 			</a>
 		</div>
@@ -52,8 +46,14 @@
 		<div class="section" id="slide-projects">
 			<h1 class="title">My Projects</h1>
 		</div>
-		<div class="section" id="slide-contact">
-			<h1 class="title">Contact Me</h1>
+	</div>
+	<div class="footer">
+		<div class="footer-content">
+			<h1 class="title">Want to connect?<br>Contact me at:</h1>
+			<h2>E-mail: alanlam56@gmail.com</h2>
+			<h2>Phone: +1(306)681-4998</h2>
+			<h2>LinkedIn</h2>
+			<h2>Github</h2>
 		</div>
 	</div>
 </body>

@@ -9,16 +9,15 @@ body
 	font-family: 'Inconsolata';
 	margin: 0;
 	padding: 0;
-	background-color: #212121;
 }
 
 .nav {
-	background-color: #212121;
+	background-color: rgba(0,0,0,0);
 	align-items: center;
 }
 
 .nav-items {
-	background-color: #212121;
+	background-color: rgba(0,0,0,0);
 	position: fixed;
 	top: 25%;
 	right: 25px;
@@ -26,7 +25,7 @@ body
 	text-align: right;
 	list-style: none;
 	font-size: 1.6vw;
-	z-index: 10;
+	z-index: 999;
 }
 
 .item {
@@ -37,7 +36,7 @@ body
 .link {
 	color: white;
 	text-decoration: none;
-	transition: opacity 0.5s, color 1s, border-color 0.5s;
+	transition: opacity 0.5s, color 0.7s, border-color 0.8s;
 	border-bottom: 2px solid #18db2b;
 	border-width: 100%;
 }
@@ -45,6 +44,7 @@ body
 .link:hover {
 	opacity: 0.5;
 	border-color: red;
+	cursor: pointer;
 }
 
 .active {
@@ -54,16 +54,18 @@ body
 .container
 {
 	position: relative;
+	z-index: 3;
 	width: 100%;
 	height: 100vh;
 }
 
 .section
 {
+	z-index: 3;
+
 	width: 100%;
 	height: 100vh;
-	background-size: cover;
-	background-color: #212121;
+	background: rgb(33, 33, 33);
 	color: white;
 
 	display: flex;
@@ -99,36 +101,15 @@ body
 }
 /* blinking caret -END- */
 
-/*
-#btn-run {
-	text-decoration: none;
-	color: white;
-	position: absolute;
-	bottom: 40px;
-	right: -25px;
-	float: right;
-	margin-right: 80px;
-	border: 0px;
-	background-color: rgba(0,0,0,0);
-	font-size: 4.3vw;
-
-	transition: color 0.8s;
-}
-
-#btn-run:hover {
-	color: rgba(255,255,255,0.3);
-}
-*/
-
 #learn-more {
 	visibility: hidden;
 	position: absolute;
-	bottom: 50px;
+	bottom: 10px;
 	padding-top: 70px;
 	text-decoration: none;
 	font-size: 1.3vw;
 	color: rgba(0,0,0,0);
-	transition: color 2s, opacity 1s;
+	transition: opacity 1s;
 }
 
 /* Animation for the down anchor */
@@ -209,10 +190,52 @@ body
 	border-radius: 100px;
 }
 
-#slide-home {}
+#slide-projects {
+	background: rgb(33, 33, 33);
+	margin-bottom: 100vh;
 
-#slide-about {}
+}
 
-#slide-projects {}
+.footer {
+	position: fixed;
+	z-index: 2;
+	color: rgb(33, 33, 33);
+	bottom: 10%;
+	left: 5%;
+}
 
-#slide-contact {}
+.footer-content h1 {
+	font-size: 4vw;
+}
+
+.footer-content h2 {
+	font-size: 2vw;
+}
+
+.footer-content {
+	box-sizing: content-box;
+	border: 2px solid rgb(33, 33, 33);
+	padding-left: 10%;
+	padding-right: 6%;
+	padding-bottom: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
