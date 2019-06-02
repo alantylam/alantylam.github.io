@@ -9,6 +9,7 @@ body
 	font-family: 'Inconsolata';
 	margin: 0;
 	padding: 0;
+	background: rgb(71, 71, 71);
 }
 
 .nav {
@@ -104,7 +105,7 @@ body
 #learn-more {
 	visibility: hidden;
 	position: absolute;
-	bottom: 10px;
+	bottom: 20px;
 	padding-top: 70px;
 	text-decoration: none;
 	font-size: 1.3vw;
@@ -193,35 +194,95 @@ body
 #slide-projects {
 	background: rgb(33, 33, 33);
 	margin-bottom: 100vh;
+}
 
+.title {
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.contact {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	color: rgb(33, 33, 33);
+	top: 0;
+	left: 0;
+}
+
+.background-image {
+	height: 100%;
+	background: url('../Image/background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: blur(4px);
+  	-webkit-filter: blur(4px);
+}
+
+.contact-info {
+	position: absolute;
+	bottom: 21%;
+	margin-left: 5vw;
+	line-height: 70px;
+}
+
+.contact-info h1 {
+	font-size: 4vw;
+	text-shadow: 1px 1px 4px #000000;
+}
+
+.body {
+	margin-left: 5vw;
+	line-height: 90px;
+}
+
+.mailto {
+	text-decoration: none;
+	color: #757575;
+}
+
+.separator {
+	position: absolute;
+	bottom: 15%;
+	width: 100vw;
 }
 
 .footer {
+	position: absolute;
+	bottom: 4.4%;
+	left: 0; right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#linkedin img {
+	height: 50px;
+	width: 50px;
+}
+
+#github img {
+	margin-left: 25px;
+	height: 50px;
+	width: 50px;
+}
+
+/*
+.footer {
 	position: fixed;
-	z-index: 2;
-	color: rgb(33, 33, 33);
-	bottom: 10%;
-	left: 5%;
+	width: 100%;
+	height: 6%;
+	z-index: 3;
+	background: rgb(33, 33, 33);
+	color: white;
+	bottom: 0;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.5s;
 }
-
-.footer-content h1 {
-	font-size: 4vw;
-}
-
-.footer-content h2 {
-	font-size: 2vw;
-}
-
-.footer-content {
-	box-sizing: content-box;
-	border: 2px solid rgb(33, 33, 33);
-	padding-left: 10%;
-	padding-right: 6%;
-	padding-bottom: 5%;
-}
-
-
-
+*/
 
 
 

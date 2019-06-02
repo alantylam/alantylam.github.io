@@ -30,10 +30,10 @@ $(document).ready(function(){
 		if (Scroll >= (half*5)) {
 		    $("#link-4").addClass("active");
 			$("#link-3").removeClass("active");
-			$('.link').css('color', 'black');
+			//$('.link').css('color', 'black');
 		} else {
 		    $("#link-4").removeClass("active");
-		    $('.link').css('color', 'white');
+		    //$('.link').css('color', 'white');
 		}
 
 	});
