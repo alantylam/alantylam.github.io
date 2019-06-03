@@ -2,103 +2,139 @@
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
 <meta name="viewport" content="width=device-width">
-
+<link rel="stylesheet" type="text/css" href="CSS/new_design.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<script src="JavaScript/style.js"></script>
+<script src="JavaScript/new_design.js"></script>
 <title>Alan Lam</title>
 </head>
 
 <body>
+	<div class="nav">
+		<ul class="nav-items" id="nav-items">
+			<li class="item"><a class="link active" id="link-1" href="#slide-home">HOME</a></li>
+			<li class="item"><a class="link" id="link-2" href="#slide-about">ABOUT</a></li>
+			<li class="item"><a class="link" id="link-3" href="#slide-projects">PROJECTS</a></li>
+			<li class="item"><a class="link" id="link-4" onclick="scrollToBottom()">CONTACT</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="section" id="slide-home">
+			<h1 class="name">AlanLam</h1>
 
-<header>
-	<div class="container" id="navbar">
-		<div class="logo">
-			<a id="logo" href="#videobg">Alan Lam</a>
-			<!--<a class="btn active" id="logo2" href="#videobg">Alan Tsz Yeung Lam</a>-->
+			<p id="message">></p>
+			<div id="blinking"><h1><br></h1></div>
+
+			<a id="learn-more" href="#slide-about">
+				<span></span>
+			</a>
 		</div>
-		<nav id="navbar_top">
-			<ul class="nav-list">
-				<!--
-				<li class="nav-item"><a class="nav-item-link" id="aboutme-item" href="#about_me">About Me</a></li>
-				<li class="nav-item"><a class="nav-item-link" id="myprojects-item" href="#my_projects">My Projects</a></li>
-				<li class="nav-item"><a class="nav-item-link" id="contactme-item" href="#contact_me">Contact Me</a></li>
-				-->
-				<li class="nav-item"><a class="nav-item-link" id="testing-item" href="new_design.html">Testing</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
-<div class="content" id="body">
-	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-	<div class="video_area" id="video">
-		<video autoplay muted loop id="videobg">
-			<source src="Video/coding.mp4" type="video/mp4">
-	  		Your browser does not support HTML5 video.
-		</video>
-		<h2 class="overlay">Work in progress...</h2>
-		<!-- Can add <hr> for lines besides the word.-->
-	</div>
+		<div class="section" id="slide-about">
+			<div class="section-text" id="slide-about-section-text">
+				<h1 class="title about-title" id="slide-about-title">About Me</h1>
+				<p class="line"></p>
+				<p class="text" id="slide-about-text">
+					I am a Computer Science Graduate who is passionate about Front-End and Mobile Development. My greatest inspiration was found during my final year at the University of Calgary. The projects I was involved in allowed me to practice different process models for software development. Also, these projects helped me understand the importance of prototyping and how to improve User Experience.
+				</p>
+			</div>
+			<div class="section-photo">
+				<img src="Image/0.jpeg">
+			</div>
 
+		</div>
+		<div class="section" id="slide-projects">
+			<div class="title project-title">
+				<h1>My Projects</h1>
+			</div>
+			<div class="project">
+				<div class="project-ios">
+					<div>
+						<div class="block block-mybx">
+							<a class="name-project" href="https://github.com/alantylam/mybx"></a>
+						</div>
+						<p>MyBX</p>
+					</div>
+					<div>
+						<div  class="block block-ws">
+							<a class="name-project" href="https://github.com/alantylam/ws"></a>
+						</div>
+						<p>WS</p>
+					</div>
+				</div>
+				<div class="project-other">
+					<div>
+						<div  class="block block-java">
+							<a class="name-project" href="https://github.com/alantylam/mealOrdering"></a>
+						</div>
+						<p>Meal Ordering</p>
+					</div>
+					<div>
+						<div  class="block block-web">
+							<a class="name-project" href="https://github.com/alantylam/alantylam.github.io"></a>
+						</div>
+						<p>My Website (Source Code)</p>
+					</div>
+				</div>
+			<!--
+				<div class="slides">
+					<input type="radio" name="r" id="r1" checked>
+					<input type="radio" name="r" id="r2">
+					<input type="radio" name="r" id="r3">
+
+					<div class="slide s1">
+						<img src="Image/ios.jpg" alt="">
+					</div>
+					<div class="slide s2">
+						<img src="Image/java.jpg" alt="">
+					</div>
+					<div class="slide s3">
+						<img src="Image/web.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="navigation">
+					<label for="r1" class="bar">iOS</label>
+					<label for="r2" class="bar">Java</label>
+					<label for="r3" class="bar">Web</label>
+				</div>
+			-->
+			</div>
+		</div>
+	</div>
+	<div class="contact">
+		<div class="contact-background background-image"></div>
+		<div class="title contact-title">
+			<h1 class="name">AlanLam</h1>
+		</div>
+		<div class="contact-info">
+			<h1>
+				<span style="color: #ff353f">if (</span><span style="color: white">connect</span><span style="color: #ff353f">) {</span><br>
+			</h1>
+			<h1 class="body"><span style="color: #63d2ff">	contact</span><span style="color: #cccccc">.</span><span style="color: #18db2b">email()</span><span style="color: #757575">; // <a class="mailto" href="mailto:alanlam56@gmail.com">alanlam56@gmail.com</a></span><br>
+				<span style="color: #63d2ff">contact</span><span style="color: #cccccc">.</span><span style="color: #18db2b">phone()</span><span style="color: #757575">; // (306)681-4998</span><br>
+				<span style="color: #63d2ff">	alanlam</span><span style="color: #cccccc">.</span><span style="color: #18db2b">resume()</span><span style="color: #757575">; // <a class="resume" href="Others/AlanLam_Resume.pdf">Click Here</a></span><br>
+			</h1>
+			<h1>
+				<span style="color: #ff353f">}</span><br>
+			</h1>
+		</div>
+		<div class="separator">
+			<hr>
+		</div>
+		<div class="footer">
+			<a class="external-link" id="linkedin" href="https://linkedin.com/in/alantylam/"><img src="Image/linkedin_white.png"></a>
+			
+			<p id="copy-right">&copy;2019 Alan Lam. All Rights Reserved.</p>
+			<a class="external-link" id="github" href="http://github.com/alantylam/"><img src="Image/github_white.png"></a><br>
+		</div>
+	</div>
 	<!--
-	<div class="about_me-area">
-		<div class="parallax slide_odd" id="about_me">
-			<div class="tint">
-				<h3 class="sect-title">About Me</h3>
-			</div>
-		</div>
-		<div class="text">
-			<p>
-			I am a Computer Science Graduate since 2018 June. Throughout my time at the University of Calgary, I have developed a strong interest in front-end and mobile development. My greatest inspiration was found in CPSC 599 during my final year. In CPSC 599, me and my team had to extend an existing project in iOS, from that, I got a grasp of software development process in practice. During the project, we used the "Waterfall Model" as our development process model. My biggest takeaway from this project is that I learnt how to implement User Interface programmatically and I get to apply UI design principles learnt from other courses.
-			<br><br>
-			Most of my work experience is in the Retail Tech Industry. I worked at 3 different telecommunications companies, and I currently work for Apple Retail as a Specialist. Through these work environments, I had developed exceptional interpersonal skill, sense of teamwork and technical aptitude. From working at Apple Retail, I learnt that behaviour drives result. Customer service is about taking the time to understand our customers; aligning their interests to their needs is what drives the business to success. These experiences allowed me exceed expectations consistently and became a top performer.
-			<br><br>
-			Outside of work, I like to participate in different sports, such as badminton and volleyball, and work on side projects; mostly in mobile development.
-			<br><br>
-			</p>
-		</div>
+	<div class="footer">
+		<p>TESTING</p>
 	</div>
-
-	<div class="my_projects-area">
-		<div class="parallax slide_even" id="my_projects">
-			<div class="tint">
-				<h3 class="sect-title">My Projects</h3>
-			</div>
-		</div>
-		<div class="text">
-			<p>
-			MyBX - <a href="https://www.github.com/alantylam/mybx">https://www.github.com/alantylam/mybx</a><br>
-			Car Rental Website - <a href="https://www.github.com/alantylam/CPSC471_Project">https://www.github.com/alantylam/CPSC471_Project</a><br>
-			Meal Ordering - <a href="https://www.github.com/alantylam/mealOrdering">https://www.github.com/alantylam/mealOrdering</a><br>
-			WS - <a href="https://www.github.com/alantylam/ws">https://www.github.com/alantylam/ws</a><br>
-			</p>
-		</div>
-	</div>
-
-	<div class="contact_me-area">
-		<div class="parallax slide_odd" id="contact_me">
-			<div class="tint">
-				<h3 class="sect-title">Contact Me</h3>
-			</div>
-		</div>
-		<div class="text">
-			<div class="info">
-				<p id="contact_info">E-mail: alanlam56@gmail.com<br>Phone: +1(306)681-4998</p>
-			</div>
-		</div>
-	</div>
-</div>
--->
-<!--
-<div class="footer">
-	
-	<a class="footer-items" id="linkedin" href="https://www.linkedin.com/in/alantylam/"><img src="./Image/linkedin.png" height="50" width="50" /></a>
-
-	<p id="contact_info">E-mail: alanlam56@gmail.com<br>Phone: +1(306)681-4998</p>
-	<p class="footer-items" id="copy-right">&copy;2019 Alan Lam. All Rights Reserved.</p>	
-</div>
 -->
 </body>
 

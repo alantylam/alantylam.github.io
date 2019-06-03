@@ -12,6 +12,36 @@ body
 	background: rgb(71, 71, 71);
 }
 
+.container
+{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	z-index: 3;
+}
+
+.section
+{
+	width: 100%;
+	height: 100vh;
+	background: rgb(33, 33, 33);
+	color: white;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.name
+{
+	position: absolute;
+	top: 0px;
+	left: 45px;
+	font-size: 3vw;
+	color: white;
+}
+
+/* --------Navbar-------- */
 .nav {
 	background-color: rgba(0,0,0,0);
 	align-items: center;
@@ -52,35 +82,9 @@ body
 	border-color: red;
 }
 
-.container
-{
-	position: relative;
-	z-index: 3;
-	width: 100%;
-	height: 100vh;
-}
+/* --------Navbar--------  -END- */
 
-.section
-{
-	z-index: 3;
-
-	width: 100%;
-	height: 100vh;
-	background: rgb(33, 33, 33);
-	color: white;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#name
-{
-	position: absolute;
-	top: 0px;
-	left: 45px;
-	font-size: 3vw;
-}
+/* --------Home Section-------- */
 
 #message {
 	color: #18db2b;
@@ -162,7 +166,11 @@ body
 }
 /* Animation for the down anchor -END- */
 
-.title {
+/* --------Home Section-------- -END- */
+
+/* --------About Section-------- */
+
+.about-title {
 	font-size: 5vw;
 }
 
@@ -191,13 +199,173 @@ body
 	border-radius: 100px;
 }
 
+/* --------About Section-------- -END- */
+
+/* --------Project Section-------- */
+
 #slide-projects {
 	background: rgb(33, 33, 33);
+	width: 100%;
+	height: 100%;
 	margin-bottom: 100vh;
 }
 
-.title {
-	color: white;
+.project-title {
+	position: absolute;
+	bottom: -117vh;
+	font-size: 3vw;
+}
+
+.project {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: -200vh;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.project a {
+	text-decoration: none;
+	color: black;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.project-ios {
+	position: absolute;
+	top: 17vh;
+	display: flex;
+	vertical-align: center;
+}
+
+.project-other {
+	position: absolute;
+	top: 56vh;
+	display: flex;
+	vertical-align: center;
+}
+
+.block {
+	font-size: 4vw;
+	height: 30vh;
+	width: 37vw;
+	background: rgb(48, 48, 48);
+
+	text-decoration: none;
+	transition: 0.6s;
+
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+
+.block:hover {
+	opacity: 0.6;
+	box-shadow: 0 8px 16px 0 rgba(255,255,255,0.4);
+}
+
+.block-ws, .block-web {
+	margin-left: 3vw;
+}
+
+.block-mybx {
+	background: url('../Image/ios1.png');
+	background-size: cover;
+	background-position: center;
+}
+.block-ws {
+	background: url('../Image/ios1.png');
+	background-size: cover;
+	background-position: center;
+}
+.block-java {
+	background: url('../Image/java.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.block-web {
+	background: url('../Image/web3.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+/*
+.project {
+	box-sizing: border-box;
+	border: 4px solid white;
+	position: absolute;
+	bottom: -190vh;
+	margin-top: 14vh;
+	width: 70vw;
+	height: 70vh;
+	overflow: hidden;
+}
+
+.navigation {
+	position: absolute;
+	bottom: 4%;
+	right: 2%;
+}
+
+.bar {
+	height: 10px;
+	border: 2px solid white;
+	margin-left: 6px;
+	padding-top: 4px;
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	cursor: pointer;
+	transition: background 1s;
+}
+
+.bar:hover {
+	background: white;
+}
+
+input[name="r"] {
+	position: absolute;
+	visibility: hidden;
+}
+
+.slides {
+	width: 300%;
+	height: 100%;
+	display: flex;
+}
+
+.slide {
+	width: 34%;
+	height: 100%;
+	transition: 0.6s;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+
+#r1:checked ~ .s1 {
+	margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+	margin-left: -34%;
+}
+
+#r3:checked ~ .s1 {
+	margin-left: -68%;
+}
+*/
+
+/* --------Project Section-------- -END- */
+
+/* --------Contact Section-------- */
+
+.contact-title {
 	text-shadow: 2px 2px 4px #000000;
 }
 
@@ -211,25 +379,27 @@ body
 	left: 0;
 }
 
-.background-image {
-	height: 100%;
+.contact-background {
 	background: url('../Image/background.jpg');
+	height: 100%;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
+
+.background-image {
 	filter: blur(4px);
   	-webkit-filter: blur(4px);
 }
 
 .contact-info {
 	position: absolute;
-	bottom: 21%;
-	margin-left: 5vw;
-	line-height: 70px;
+	bottom: 18%;
+	margin-left: 8vw;
 }
 
 .contact-info h1 {
-	font-size: 4vw;
+	font-size: 3.8vw;
 	text-shadow: 1px 1px 4px #000000;
 }
 
@@ -238,9 +408,16 @@ body
 	line-height: 90px;
 }
 
-.mailto {
+.mailto, .resume {
 	text-decoration: none;
 	color: #757575;
+	transition: opacity 0.7s, color 0.7s;
+}
+
+.mailto:hover, .resume:hover {
+	opacity: 0.8;
+	color: white;
+	text-decoration: underline;
 }
 
 .separator {
@@ -258,31 +435,26 @@ body
 	justify-content: center;
 }
 
-#linkedin img {
+#linkedin img, #github img {
 	height: 50px;
 	width: 50px;
+	transition: opacity 0.6s;
 }
 
 #github img {
 	margin-left: 25px;
-	height: 50px;
-	width: 50px;
 }
 
-/*
-.footer {
-	position: fixed;
-	width: 100%;
-	height: 6%;
-	z-index: 3;
-	background: rgb(33, 33, 33);
-	color: white;
-	bottom: 0;
-	text-align: center;
-	opacity: 0;
-	transition: opacity 0.5s;
+#linkedin img:hover, #github img:hover {
+	opacity: 0.3;
 }
-*/
+
+#copy-right {
+	margin-left: 25px;
+	color: white;
+}
+
+/* --------Contact Section-------- -END- */
 
 
 
