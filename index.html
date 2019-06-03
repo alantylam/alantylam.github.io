@@ -13,7 +13,14 @@
 </head>
 
 <body>
-	<div class="nav">
+	<div class="preload" id="preload">
+		<div class="loader-frame">
+			<div class="loader1" id="loader1"></div>
+			<div class="loader2" id="loader2"></div>
+		</div>
+	</div>
+
+	<div class="nav" id="nav">
 		<ul class="nav-items" id="nav-items">
 			<li class="item"><a class="link active" id="link-1" href="#slide-home">HOME</a></li>
 			<li class="item"><a class="link" id="link-2" href="#slide-about">ABOUT</a></li>
@@ -21,7 +28,7 @@
 			<li class="item"><a class="link" id="link-4" onclick="scrollToBottom()">CONTACT</a></li>
 		</ul>
 	</div>
-	<div class="container">
+	<div class="container" id="container">
 		<div class="section" id="slide-home">
 			<h1 class="name">AlanLam</h1>
 
@@ -104,7 +111,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="contact">
+	<div class="contact" id="contact">
 		<div class="contact-background background-image"></div>
 		<div class="title contact-title">
 			<h1 class="name">AlanLam</h1>

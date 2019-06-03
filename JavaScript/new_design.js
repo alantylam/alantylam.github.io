@@ -1,4 +1,4 @@
-window.onload = firstLn;
+window.onload = setTimeout(trig, 1500);
 
 $(document).ready(function(){
   	$('ul li a').click(function(){
@@ -48,7 +48,14 @@ var speed = 80;
 var i2 = 0;
 var j2 = 0;
 
-var pause = 700; 
+var pause = 700;
+
+function trig() {
+	document.getElementById("container").style.opacity = "1";
+	document.getElementById("nav").style.opacity = "1";
+	document.getElementById("contact").style.opacity = "1";
+	setTimeout(firstLn, 400);
+}
 
 function firstLn() {
 	if (i < line_1.length) {
