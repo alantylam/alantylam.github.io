@@ -54,7 +54,7 @@ function trig() {
 	document.getElementById("container").style.opacity = "1";
 	document.getElementById("nav").style.opacity = "1";
 	document.getElementById("contact").style.opacity = "1";
-	setTimeout(firstLn, 400);
+	setTimeout(firstLn, 700);
 }
 
 function firstLn() {
