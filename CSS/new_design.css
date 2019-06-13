@@ -107,11 +107,15 @@ body
 .container
 {
 	position: relative;
-	width: 100vw;
-	height: 100vh;
+	background-color: rgba(0,0,0,0);
+	top: 1vh;
+	left: 1vw;
+	width: 98vw;
 	z-index: 3;
 	opacity: 0;
 	transition: 0.4s;
+	box-shadow: 0px 0px 15px grey;
+	margin-bottom: 100vh;
 }
 
 .section
@@ -205,7 +209,7 @@ body
 #learn-more {
 	visibility: hidden;
 	position: absolute;
-	bottom: 20px;
+	top: 90vh;
 	padding-top: 70px;
 	text-decoration: none;
 	font-size: 1.3vw;
@@ -307,7 +311,7 @@ body
 .section-photo, .section-text {
 	margin-top: 200px;
 	opacity: 0;
-	transition: opacity 2s, margin 4s;
+	transition: 2s;
 }
 
 /* --------About Section-------- -END- */
@@ -315,11 +319,12 @@ body
 /* --------Project Section-------- */
 
 #slide-projects {
-	background: rgb(33, 33, 33);
-	width: 100%;
-	height: 100%;
+	/*
 	border-bottom: 1px solid grey;
+	*/
+	/*
 	margin-bottom: 100vh;
+	*/
 	/*
 	display: inline-block;
 	*/
@@ -332,15 +337,13 @@ body
 
 .project-title {
 	position: absolute;
-	bottom: -117vh;
+	bottom: 82vh;
 	font-size: 3vw;
 }
 
 .project {
-	width: 100%;
-	height: 100%;
 	position: absolute;
-	bottom: -200vh;
+	bottom: 97vh;
 	display: flex;
 	justify-content: center;
 	text-align: center;
@@ -494,7 +497,7 @@ body
 
 .mailto, .resume {
 	text-decoration: none;
-	transition: opacity 0.7s, color 0.7s;
+	transition: 0.5s;
 }
 
 .resume {
@@ -502,9 +505,16 @@ body
 }
 
 .mailto:hover, .resume:hover {
-	opacity: 0.8;
-	color: white;
+	color: #4cffe4;
 	text-decoration: underline;
+}
+
+.contact-info-function, .email {
+	transition: 0.5s;
+}
+
+.resume:hover > .contact-info-function, .mailto:hover > .email{
+	color: #4cffe4;
 }
 
 .footer {
