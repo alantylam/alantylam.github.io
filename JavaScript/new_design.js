@@ -6,56 +6,78 @@ $(document).ready(function(){
     	$(this).addClass("active");
 	});
 
+  	/* Animate Scrolling - Safari */
+  	/*
+  	$("a[href^='#']").click(function(e) {
+		e.preventDefault();
+		
+		var position = $($(this).attr("href")).offset().top;
+
+		$("body, html").animate({
+			scrollTop: position
+		});
+	});
+	*/
+	/* Animate Scrolling - Safari -END-*/
+
 	$(window).scroll(function() {
 		var Scroll = $(window).scrollTop();
 		var half = $(window).height()/2;
+		var full = $(window).height();
 
 		if (Scroll >= 0) {
 		    $("#link-1").addClass("active");
+
+		    $("#slide-home").css("opacity", "1");
 		} else {
 		    $("#link-1").removeClass("active");
+
+		    $("#slide-home").css("opacity", "0");
 		}
 		if (Scroll >= half) {
 		    $("#link-2").addClass("active");
-			$("#link-1").removeClass("active"); 
+			$("#link-1").removeClass("active");
+
+			$(".section-text").css("opacity", "1");
+			$(".section-photo").css("opacity", "1");
+
+			$(".section-text").css("margin-top", "0px");
+			$(".section-photo").css("margin-top", "0px");
 		} else {
 		    $("#link-2").removeClass("active");
+
+		    $(".section-text").css("opacity", "0");
+			$(".section-photo").css("opacity", "0");
+
+			$(".section-text").css("margin-top", "300vh");
+			$(".section-photo").css("margin-top", "300vh");
 		}
 		if (Scroll >= (half*3)) {
 		    $("#link-3").addClass("active");
-			$("#link-2").removeClass("active"); 
+			$("#link-2").removeClass("active");
+
+			$(".project-title").css("opacity", "1");
+			$(".project").css("opacity", "1");
+
+			$(".project-ios").css("margin-left", "0vw");
+			$(".project-other").css("margin-left", "0vw");
 		} else {
 		    $("#link-3").removeClass("active");
+
+		    $(".project-title").css("opacity", "0");
+			$(".project").css("opacity", "0");
+
+			$(".project-ios").css("margin-left", "100vw");
+			$(".project-other").css("margin-left", "-100vw");
 		}
 		if (Scroll >= (half*5)) {
 		    $("#link-4").addClass("active");
 			$("#link-3").removeClass("active");
-			//$('.link').css('color', 'black');
 		} else {
 		    $("#link-4").removeClass("active");
-		    //$('.link').css('color', 'white');
 		}
 	});
 
-	/*
-	$("a").on('click', function(event) {
-	    // Make sure this.hash has a value before overriding default behavior
-	    if (this.hash !== "") {
-	      	// Prevent default anchor click behavior
-	    	event.preventDefault();
-			// Store hash
-			var hash = this.hash;
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-			$('body').animate({
-				scrollTop: $(hash).offset().top
-			}, 1400, function(){
-			// Add hash (#) to URL when done scrolling (default click behavior)
-				window.location.hash = hash;
-			});
-		} // End if
-	});
-	*/
 });
 
 var i = 0;
