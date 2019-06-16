@@ -67,8 +67,8 @@ $(document).ready(function(){
 		    $(".project-title").css("opacity", "0");
 			$(".project").css("opacity", "0");
 
-			$(".project-ios").css("margin-left", "100vw");
-			$(".project-other").css("margin-left", "-100vw");
+			$(".project-ios").css("margin-left", "20vw");
+			$(".project-other").css("margin-left", "-20vw");
 		}
 		if (Scroll >= (half*5)) {
 		    $("#link-4").addClass("active");
