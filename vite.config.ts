@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/your-repo-name/',
+  base: '/alantylam.github.io/',
 })
