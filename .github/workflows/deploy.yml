@@ -1,14 +1,11 @@
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [ "main" ]
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # Add these lines right here:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,7 +14,10 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
