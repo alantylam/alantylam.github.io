@@ -1,23 +1,31 @@
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    # Add these lines right here:
+    # Add this block to fix the "Missing environment" error
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm install
-      - run: npm run build
+      
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
