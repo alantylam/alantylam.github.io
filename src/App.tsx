@@ -105,24 +105,24 @@ export default function Portfolio() {
 
   const skills = [
     {
-      icon: '⚙️',
-      title: 'Backend Development',
-      tags: ['Java', 'Spring Boot', 'REST APIs', 'Microservices', 'Maven']
+      title: 'Languages',
+      tags: ['Java', 'Python', 'SQL (PostgreSQL, Oracle)', 'JavaScript', 'ReactJS', 'HTML5/CSS3']
     },
     {
-      icon: '💾',
-      title: 'Database',
-      tags: ['SQL', 'PostgreSQL', 'MySQL', 'Query Optimization', 'Database Design']
+      title: 'Backend & Architecture',
+      tags: ['Microservices', 'Event-Driven Design', 'Apache Kafka', 'Distributed Systems', 'RESTful APIs', 'GraphQL']
     },
     {
-      icon: '🎨',
-      title: 'Frontend',
-      tags: ['JavaScript', 'React', 'HTML/CSS', 'TypeScript', 'Responsive Design']
+      title: 'AI & Productivity',
+      tags: ['AI-Augmented Development (GitHub Copilot)', 'AI Agents', 'Prompt Engineering', 'Automated Test Generation']
     },
     {
-      icon: '🛠️',
       title: 'Tools & DevOps',
-      tags: ['Git', 'Docker', 'Jenkins', 'AWS', 'Agile/Scrum']
+      tags: ['CI/CD (GitHub Actions, Jenkins)', 'Git', 'Docker', 'Bitbucket', 'Webhooks', 'Monitoring & Observability']
+    },
+    {
+      title: 'Testing',
+      tags: ['Unit & Integration Testing', 'UI Automation (Selenium)', 'JUnit', 'Mockito', 'PyTest', 'Regression Testing']
     }
   ];
 
@@ -158,22 +158,9 @@ export default function Portfolio() {
 
   const projects = [
     {
-      icon: '🏦',
-      title: 'Banking Management System',
-      description: 'Enterprise-level banking application with secure transactions, user management, and real-time reporting.',
-      tags: ['Java', 'Spring Boot', 'PostgreSQL', 'React']
-    },
-    {
-      icon: '📊',
-      title: 'Analytics Dashboard',
-      description: 'Real-time analytics platform processing millions of records with optimized queries and interactive visualizations.',
-      tags: ['Java', 'MySQL', 'REST API', 'Chart.js']
-    },
-    {
-      icon: '🛒',
-      title: 'E-Commerce Platform',
-      description: 'Full-featured online shopping platform with inventory management, payment integration, and order tracking.',
-      tags: ['Java', 'Spring', 'SQL', 'JavaScript']
+      title: 'Tesla Helper',
+      description: 'Made to help my adjust charge limit based on weather forecast, and automate charging schedules based on departure time.',
+      tags: ['Python', 'API', 'Github Workflows']
     }
   ];
 
@@ -325,7 +312,6 @@ export default function Portfolio() {
                 className="bg-[#1a1a1a] p-6 rounded-2xl border border-blue-500/20 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-2"
               >
                 <h3 className="text-blue-500 text-2xl mb-4 flex items-center gap-2">
-                  <span className="text-3xl">{skill.icon}</span>
                   <span className="text-xl font-semibold">{skill.title}</span>
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -382,9 +368,9 @@ export default function Portfolio() {
                 key={index}
                 className="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-blue-500/20 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-2"
               >
-                <div className="h-48 bg-[#2a2a2a] flex items-center justify-center text-6xl text-blue-500 border-b border-blue-500/30">
+                {/* <div className="h-48 bg-[#2a2a2a] flex items-center justify-center text-6xl text-blue-500 border-b border-blue-500/30">
                   {project.icon}
-                </div>
+                </div> */}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-200 mb-2">{project.title}</h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
