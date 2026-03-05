@@ -160,7 +160,7 @@ export default function Portfolio() {
     {
       title: 'Tesla Helper',
       description: 'Automatically adjust charge limit based on weather forecast, and automate charging schedules based on next day\'s departure time.',
-      tags: ['Python', 'API', 'Github Workflows']
+      tags: ['Python', 'API', 'Webhooks', 'Github Workflows']
     }
   ];
 
@@ -233,13 +233,13 @@ export default function Portfolio() {
         <div className="max-w-4xl relative z-10 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Hi, I'm Alan</h1>
           <div className="text-2xl md:text-3xl mb-4 opacity-95">A Full-Stack Software Developer</div>
-          <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+          {/* <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             I have five years of fintech experience specializing in distributed systems, 
             event-driven architecture, and large-scale data migrations. 
             I bridge high-level technical execution with strategic business impact by leading cross-functional teams 
             and leveraging AI-augmented development to deliver secure, high-integrity financial solutions.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          </p> */}
+          <div className="flex gap-4 justify-center flex-wrap py-5">
             <button
               onClick={() => scrollToSection('contact')}
               className="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/40 transition-all hover:-translate-y-1"
@@ -331,7 +331,7 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="h-screen flex items-center justify-center py-120 px-8">
+      <section id="experience" className="h-screen flex items-center justify-center py-175 px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-blue-500 mb-4">Work Experience</h2>
           <p className="text-center text-gray-400 text-lg mb-12">My professional journey</p>
