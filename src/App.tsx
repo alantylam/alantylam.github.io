@@ -159,7 +159,7 @@ export default function Portfolio() {
   const projects = [
     {
       title: 'Tesla Helper',
-      description: 'Made to help my adjust charge limit based on weather forecast, and automate charging schedules based on departure time.',
+      description: 'Automatically adjust charge limit based on weather forecast, and automate charging schedules based on next day\'s departure time.',
       tags: ['Python', 'API', 'Github Workflows']
     }
   ];
@@ -372,7 +372,7 @@ export default function Portfolio() {
                   {project.icon}
                 </div> */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-200 mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-bold items-center justify-center text-gray-200 mb-2">{project.title}</h3>
                   <p className="text-gray-400 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
