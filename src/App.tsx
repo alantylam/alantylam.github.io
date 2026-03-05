@@ -128,26 +128,30 @@ export default function Portfolio() {
 
   const experiences = [
     {
-      company: 'Company Name',
+      company: 'Morgan Stanley',
       title: 'Full-Stack Software Developer',
-      date: 'January 2022 - Present',
+      date: 'April 2022 – Present',
       responsibilities: [
-        'Developed and maintained Java-based backend services using Spring Boot framework, serving 100K+ daily active users',
-        'Designed and optimized complex SQL queries and database schemas, reducing query response time by 40%',
-        'Built RESTful APIs and microservices architecture for seamless integration with frontend applications',
-        'Collaborated with cross-functional teams in Agile environment to deliver features on schedule',
-        'Mentored junior developers on best practices for Java development and database design'
+        'Implemented a microservices-based migration framework to facilitate high-stakes financial data transfers between platforms',
+        'Engineered an event-driven data pipeline using Kafka; produced messages for data transfer and processed asynchronous responses to manage real-time status updates',
+        'Accelerated delivery cycles by integrating AI agents into the development workflow to automate unit and integration test generation, ensuring robust coverage for complex financial logic',
+        'Spearheaded Technical Discovery for high-priority Epics, using AI to assist in identifying edge-case use cases and breaking down work into actionable, defect-resistant user stories',
+        'Optimized legacy codebases by leveraging AI-driven debugging to resolve bottlenecks and improve the performance of existing microservices',
+        'Led development of a third-party cost basis integration in Shareworks, mitigating multi-million dollar IRS penalty risks for millions of U.S. participants',
+        'Automated quality assurance by developing unit, integration, and UI test suites, saving thousands of manual testing hours'
       ]
     },
     {
-      company: 'Previous Company',
-      title: 'Software Developer',
-      date: 'June 2021 - December 2021',
+      company: 'Shareworks by Morgan Stanley',
+      title: 'Team Lead | Migration Specialist',
+      date: 'July 2019 - April 2022',
       responsibilities: [
-        'Implemented new features for enterprise web applications using Java and JavaScript',
-        'Wrote efficient SQL queries and stored procedures for data processing and reporting',
-        'Participated in code reviews and maintained high code quality standards',
-        'Resolved production issues and improved application performance through optimization'
+        'Managed and mentored a team of four, overseeing high-volume data migrations and streamlining processes to increase migration speed by 70%',
+        'Acted as Technical Lead for external client communications, gathering requirements for complex integrations and bug fixes',
+        'Managed end-to-end data migration projects for corporate clients, overseeing the periodic transfer of historical financial data for multiple time ranges leading up to "go-live" dates',
+        'Performed rigorous data reconciliation between client legacy platforms and Shareworks to ensure 100% accuracy of migrated financial records',
+        'Troubleshot complex data discrepancies, communicating technical limitations to clients and architecting alternative solutions to ensure data compatibility with the platform',
+        'Developed Python automation scripts that increased frontend setup efficiency by 90% and reduced manual reconciliation efforts by 60%'
       ]
     }
   ];
@@ -243,10 +247,10 @@ export default function Portfolio() {
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Hi, I'm Alan</h1>
           <div className="text-2xl md:text-3xl mb-4 opacity-95">A Full-Stack Software Developer</div>
           <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            I have about four years of experience primarily focused on Java. 
-            I enjoy the challenge of diving into large,
-            complex codebases to optimize existing functionality and 
-            build out robust new features from the ground up.
+            I have five years of fintech experience specializing in distributed systems, 
+            event-driven architecture, and large-scale data migrations. 
+            I bridge high-level technical execution with strategic business impact by leading cross-functional teams 
+            and leveraging AI-augmented development to deliver secure, high-integrity financial solutions.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <button
@@ -274,25 +278,26 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
               <p>
-                I'm a Full-Stack Software Developer with a strong focus on backend development. My expertise lies in 
-                building robust, scalable server-side applications using Java and designing efficient database architectures with SQL.
+                Full-stack Software Developer with over five years of experience in the fintech sector, 
+                specializing in building distributed systems and event-driven architectures with Java and Kafka.
               </p>
               <p>
-                With 3-4 years of hands-on experience, I've worked on diverse projects ranging from enterprise applications 
-                to microservices architectures. I'm passionate about writing clean, maintainable code and continuously learning new technologies.
+                My background bridges high-level technical execution with strategic business impact, 
+                having led cross-functional teams and managed end-to-end data migrations to mitigate 
+                multi-million dollar compliance risks. 
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new frameworks, contributing to open-source projects, 
-                or sharing knowledge with the developer community.
+                I focus on leveraging AI-augmented development and rigorous data reconciliation to deliver scalable, 
+                accurate solutions for complex global platforms.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { value: '3-4', label: 'Years Experience' },
-                { value: '50+', label: 'Projects Completed' },
-                { value: '10+', label: 'Technologies' },
-                { value: '100%', label: 'Client Satisfaction' }
+                { value: '4+', label: 'Years Software Experience' },
+                { value: '2+', label: 'Years Business Experience' },
+                // { value: '10+', label: 'Technologies' },
+                // { value: '100%', label: 'Client Satisfaction' }
               ].map((stat, index) => (
                 <div
                   key={index}
